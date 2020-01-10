@@ -107,7 +107,7 @@ if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
 <body onload="startTime()">
 <table style='width:100%;body'>
         <tr>
-            <th style='font-size:30px;'>TRẠM ĐỌC QR CODE CHO SẢN PHẨM VW AR HUD cover bottom (MCK71113301)</th>
+            <th style='font-size:30px;'>VW AR HUD COVER BOTTOM (MCK71113301)</th>
             <th>
             <span style='text-align:center;font-size:25px;'>Time : <?php echo date("d-m-Y") ?> </span>
             <span id="txt" style='text-align:center;font-size:25px;'></span>
@@ -124,13 +124,11 @@ if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
 </table>
 
 <?php
-echo $_SESSION['message'];
+if (isset($_SESSION['message'])) {
+    echo $_SESSION['message'];
+}
 ?>
 
 <p><a href="report.php">Báo cáo</a></p>
-    
-
-        
-    
 </body>
 </html>
