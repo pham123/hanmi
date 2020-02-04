@@ -130,6 +130,9 @@ if (isset($_SESSION['message'])) {
 ?>
 <p><a href="MCK71113301.php">VW AR HUD cover bottom single</a></p>
 <p><a href="MCK71122301.php">HUD Cover Bottom RHD single</a></p>
+
+<p><a href="MCK71113301NG.php">Sản phẩm lỗi: VW AR HUD cover bottom single</a></p>
+<p><a href="MCK71122301NG.php">Sản phẩm lỗi: HUD Cover Bottom RHD single</a></p>
 <p><a href="report.php">Báo cáo</a></p>
 </body>
 </html>

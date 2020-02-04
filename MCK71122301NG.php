@@ -59,7 +59,7 @@ if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
     }
 
     //Insert thông tin label
-    $oDB->query("INSERT INTO LabelHistory (`TraceStationId`,`LabelHistoryQuantityOk`,`LabelHistoryLabelValue`) VALUES (7,1,?)",$code);
+    $oDB->query("INSERT INTO LabelHistory (`TraceStationId`,`LabelHistoryQuantityNg`,`LabelHistoryLabelValue`) VALUES (7,1,?)",$code);
 
     $_SESSION['message'] = "<h1 style='background-color:green;'>Thêm thành công mã tem : ".$code." lúc ".date("Y-m-d H:i:s")." </h1>";
     header('Location:?');
@@ -101,6 +101,9 @@ if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
             padding:10px;
             margin:10px;
             font-size:30px;
+        }
+        body{
+            background-color:red;
         }
     </style>
 </head>

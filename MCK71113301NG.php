@@ -17,7 +17,7 @@ if (isset($_COOKIE['hanmi'])&&$_COOKIE['hanmi']=='8400a17d1d3a92967a2e63b5522baa
 
 if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
     $code = $_POST['hanmicode'];
-    $pattern = 'MCK71122301_****_*****';
+    $pattern = 'MCK71113301_****_*****';
     #Kiểm tra xem mã tem có đảm bảo không
     $check = 1;
     if (strlen($pattern)!=strlen($code)) {
@@ -59,7 +59,7 @@ if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
     }
 
     //Insert thông tin label
-    $oDB->query("INSERT INTO LabelHistory (`TraceStationId`,`LabelHistoryQuantityOk`,`LabelHistoryLabelValue`) VALUES (7,1,?)",$code);
+    $oDB->query("INSERT INTO LabelHistory (`TraceStationId`,`LabelHistoryQuantityNg`,`LabelHistoryLabelValue`) VALUES (7,1,?)",$code);
 
     $_SESSION['message'] = "<h1 style='background-color:green;'>Thêm thành công mã tem : ".$code." lúc ".date("Y-m-d H:i:s")." </h1>";
     header('Location:?');
@@ -102,12 +102,15 @@ if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
             margin:10px;
             font-size:30px;
         }
+        body{
+            background-color:red;
+        }
     </style>
 </head>
 <body onload="startTime()">
 <table style='width:100%;body'>
         <tr>
-            <th style='font-size:30px;'>HUD Cover Bottom RHD single (MCK71122301)</th>
+            <th style='font-size:30px;'>VW AR HUD COVER BOTTOM (MCK71113301)</th>
             <th>
             <span style='text-align:center;font-size:25px;'>Time : <?php echo date("d-m-Y") ?> </span>
             <span id="txt" style='text-align:center;font-size:25px;'></span>
