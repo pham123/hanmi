@@ -17,7 +17,7 @@ if (isset($_COOKIE['hanmi'])&&$_COOKIE['hanmi']=='8400a17d1d3a92967a2e63b5522baa
 
 if (isset($_POST['hanmicode'])&&strlen($_POST['hanmicode'])==22) {
     $code = $_POST['hanmicode'];
-    $pattern = 'MCK71122301_****_*****';
+    $pattern = 'MCK71122301_ST_****_*****';
     #Kiểm tra xem mã tem có đảm bảo không
     $check = 1;
     if (strlen($pattern)!=strlen($code)) {
